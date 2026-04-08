@@ -1,4 +1,4 @@
 from enum import Enum
-class Role(Enum):
+class Role(str,Enum):
     STUDENT = "student"
     FACILITATOR = "facilitator"
