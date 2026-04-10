@@ -24,7 +24,8 @@ class CourseService:
             course_code=new_course.get("course_code"),
             title=new_course.get("title"),
             description=new_course.get("description"),
-        facilitator_email = new_course.get("facilitator_email")
+        facilitator_email = new_course.get("facilitator_email"),
+            grade = ""
 
         )
 
@@ -35,7 +36,8 @@ class CourseService:
                 course_code=course.get("course_code"),
                 title=course.get("title"),
                 description=course.get("description"),
-                facilitator_email=course.get("facilitator_email")
+                facilitator_email=course.get("facilitator_email"),
+                grade = course.get("grade")
             ))
         return courses
 
@@ -47,7 +49,8 @@ class CourseService:
             course_code=course.get("course_code"),
             title=course.get("title"),
             description=course.get("description"),
-            facilitator_email=course.get("facilitator_email")
+            facilitator_email=course.get("facilitator_email"),
+            grade = course.get("grade")
         )
 
     async def update_course(self, title: str, course_request: CourseRequest):
@@ -64,7 +67,9 @@ class CourseService:
             course_code=updated_course.get("course_code"),
             title=course.get("title"),
             description=course.get("description"),
-            facilitator_email=course.get("facilitator_email")
+            facilitator_email=course.get("facilitator_email"),
+            grade = course.get("grade")
+
         )
 
     async def delete_course(self, title: str):

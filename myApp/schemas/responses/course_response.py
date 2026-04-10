@@ -7,3 +7,4 @@ class CourseResponse(BaseModel):
     title: str
     description: str
     facilitator_email: str
+    grade : str

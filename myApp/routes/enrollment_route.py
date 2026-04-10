@@ -14,7 +14,7 @@ enrollment_service = EnrollmentService()
 @router.post("/", response_model=EnrollmentResponse)
 async def create_enrollment(enrollment: EnrollmentRequest):
     try:
-        return await enrollment_service.enroll_student()
+        return await enrollment_service.enroll_student(enrollment)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
